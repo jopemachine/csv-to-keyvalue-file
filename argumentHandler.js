@@ -42,7 +42,12 @@ module.exports = function argumentHandler(commandArguments) {
     }
   }
 
-  if (!argument['keyColumn'] || !argument['valueColumn'] || !argument['srcFile'] || !argument['dstFile']) {
+  if (
+    !argument["keyColumn"] ||
+    !argument["valueColumn"] ||
+    !argument["srcFile"] ||
+    !argument["dstFile"]
+  ) {
     errHandler();
   }
 

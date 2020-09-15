@@ -9,7 +9,10 @@ module.exports = function ({ srcFile, dstFile, keyColumn, valueColumn }) {
   let keyColumnIndex = -1;
   let valueColumnIndex = -1;
 
-  const [firstLine, ...cssLines] = fs.readFileSync(srcFile).toString().split("\n");
+  const [firstLine, ...cssLines] = fs
+    .readFileSync(srcFile)
+    .toString()
+    .split("\n");
 
   try {
     const columnNames = firstLine.split(",");
@@ -36,7 +39,6 @@ module.exports = function ({ srcFile, dstFile, keyColumn, valueColumn }) {
       console.error("Value column name not exists");
       process.exit();
     }
-
   } catch (e) {
     console.error("Css file not found or Empty css file", e);
     process.exit();
@@ -55,4 +57,4 @@ module.exports = function ({ srcFile, dstFile, keyColumn, valueColumn }) {
   fs.writeFileSync(dstFile, "\ufeff" + JSON.stringify(resultObj, null, 2), {
     encoding: "utf8",
   });
-}
+};

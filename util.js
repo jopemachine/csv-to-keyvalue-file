@@ -8,7 +8,7 @@ module.exports = {
     let result = "";
     for (let key of Object.keys(object)) {
       result += `${key}=${object[key]}
-  `
+`
     }
     return result;
   }

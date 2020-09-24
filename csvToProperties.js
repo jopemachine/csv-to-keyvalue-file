@@ -1,9 +1,9 @@
 const fs = require("fs");
 const { getProperties } = require("./util");
 
-module.exports = function ({ srcFile, dstFile, keyColumn, valueColumn }) {
-  console.log("** source file: " + srcFile);
-  console.log("** destination file: " + dstFile);
+module.exports = function ({ src, dst, keyColumn, valueColumn }) {
+  console.log("** source file: " + src);
+  console.log("** destination file: " + dst);
   console.log("** key column: " + keyColumn);
   console.log("** value column: " + valueColumn);
 
@@ -11,7 +11,7 @@ module.exports = function ({ srcFile, dstFile, keyColumn, valueColumn }) {
   let valueColumnIndex = -1;
 
   const [firstLine, ...cssLines] = fs
-    .readFileSync(srcFile)
+    .readFileSync(src)
     .toString()
     .split("\n");
 
@@ -55,7 +55,7 @@ module.exports = function ({ srcFile, dstFile, keyColumn, valueColumn }) {
     resultObj[keyData] = valueData;
   }
 
-  fs.writeFileSync(dstFile, "\ufeff" + getProperties(resultObj), {
+  fs.writeFileSync(dst, "\ufeff" + getProperties(resultObj), {
     encoding: "utf8",
   });
 };

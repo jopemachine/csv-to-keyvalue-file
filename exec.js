@@ -8,10 +8,10 @@ module.exports = (type, commandArguments) => {
   if (type) {
     switch (type) {
       case "json":
-        csvToJsonExec(argvHandler(commandArguments));
+        csvToJsonExec(commandArguments);
         break;
       case "properties":
-        csvToPropertiesExec(argvHandler(commandArguments));
+        csvToPropertiesExec(commandArguments);
         break;
       default:
         err();

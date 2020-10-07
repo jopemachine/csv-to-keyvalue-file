@@ -1,3 +1,4 @@
+const chalk = require('chalk')
 const fs = require('fs')
 const path = require('path')
 const { getProperties } = require('./util')
@@ -42,6 +43,7 @@ module.exports = function (type, { src, dst, keyColumn, valueColumn, filter, dir
     return
   }
 
+  let InvalidCnt = 0
   const resultObj = {}
 
   for (const lineIndex in cssLines) {
@@ -50,12 +52,18 @@ module.exports = function (type, { src, dst, keyColumn, valueColumn, filter, dir
 
     // eslint-disable-next-line no-eval
     if ((filter && eval(filter)) || !filter) {
+      if (!datas(valueColumn)) {
+        InvalidCnt++
+        continue
+      }
       if (datas(valueColumn).trim() === '') continue
       resultObj[`${datas(keyColumn)}`] = datas(valueColumn).trim()
       // resultObj[`#${datas("base_key")}_"${datas(keyColumn)}"`] = datas(valueColumn).trim();
       // resultObj[`#${datas("base_key")}_'${datas(keyColumn)}'`] = datas(valueColumn).trim();
     }
   }
+
+  InvalidCnt > 0 && console.log(chalk.yellow(`Invalid record: ${InvalidCnt}`))
 
   switch (type) {
     case 'json':

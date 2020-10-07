@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const meow = require("meow");
-const exec = require("./exec");
+const meow = require('meow')
+const exec = require('./exec')
 
 const cli = meow(
   `
@@ -31,37 +31,37 @@ const cli = meow(
   {
     flags: {
       src: {
-        type: "string",
-        alias: "s",
-        isRequired: (flags, input) => true,
+        type: 'string',
+        alias: 's',
+        isRequired: (flags, input) => true
       },
       dst: {
-        type: "string",
-        alias: "d",
-        isRequired: (flags, input) => false,
+        type: 'string',
+        alias: 'd',
+        isRequired: (flags, input) => false
       },
       keyColumn: {
-        type: "string",
-        alias: "k",
-        isRequired: (flags, input) => true,
+        type: 'string',
+        alias: 'k',
+        isRequired: (flags, input) => true
       },
       valueColumn: {
-        type: "string",
-        alias: "v",
-        isRequired: (flags, input) => true,
+        type: 'string',
+        alias: 'v',
+        isRequired: (flags, input) => true
       },
       filter: {
-        type: "string",
-        alias: "f",
-        isRequired: (flags, input) => false,
+        type: 'string',
+        alias: 'f',
+        isRequired: (flags, input) => false
       },
       dir: {
-        type: "boolean",
-        alias: "di",
-        isRequired: (flags, input) => false,
-      },
-    },
+        type: 'boolean',
+        alias: 'di',
+        isRequired: (flags, input) => false
+      }
+    }
   }
-);
+)
 
-exec(cli.input[0], cli.flags);
+exec(cli.input[0], cli.flags)

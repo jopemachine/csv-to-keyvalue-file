@@ -1,15 +1,15 @@
 module.exports = {
   err: function () {
-    console.log("Wrong usage. \nCheck the correct usage.");
-    process.exit();
+    console.log('Wrong usage. \nCheck the correct usage.')
+    process.exit()
   },
 
-  getProperties: function(object) {
-    let result = "";
-    for (let key of Object.keys(object)) {
+  getProperties: function (object) {
+    let result = ''
+    for (const key of Object.keys(object)) {
       result += `${key}=${object[key]}
 `
     }
-    return result;
+    return result
   }
-};
+}

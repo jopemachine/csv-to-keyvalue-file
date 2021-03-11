@@ -12,6 +12,6 @@
         --valueColumnm, -v      specify value column
 
   Examples
-      $ csv-to-keyvalue json --src=translation_jsp_utf8.csv --dst=ko.json --keyColumn=Original_text --valueColumn=type
-      $ csv-to-keyvalue properties --src=translation_jsp_utf8.csv --dst=ko.json --keyColumn=Original_text --valueColumn=type
+      $ csv-to-keyvalue json --src=example.csv --dst=ko.json --keyColumn=en --valueColumn=ko
+      $ csv-to-keyvalue properties --src=example.csv --dst=ko.json --keyColumn=en --valueColumn=ko
 ```

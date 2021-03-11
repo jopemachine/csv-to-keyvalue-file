@@ -58,8 +58,6 @@ module.exports = function (type, { src, dst, keyColumn, valueColumn, filter, dir
       }
       if (datas(valueColumn).trim() === '') continue
       resultObj[`${datas(keyColumn)}`] = datas(valueColumn).trim()
-      // resultObj[`#${datas("base_key")}_"${datas(keyColumn)}"`] = datas(valueColumn).trim();
-      // resultObj[`#${datas("base_key")}_'${datas(keyColumn)}'`] = datas(valueColumn).trim();
     }
   }
 

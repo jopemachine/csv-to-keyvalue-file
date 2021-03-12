@@ -24,9 +24,8 @@ const cli = meow(
 
 
     Examples
-        $ csv-to-keyvalue json --src=translation_jsp_utf8.csv --dst=ko.json --keyColumn=Original_text --valueColumn=type
-        $ csv-to-keyvalue properties -s=translation_jsp_utf8.csv -d=ko.json -k=Original_text -v=type
-        $ csv-to-keyvalue properties -s=translation_jsp_utf8.csv -d=ko.json -k=Original_text -v=type -f="datas('type')==='js'"
+        $ csv-to-keyvalue json --src=example.csv --dst=ko.json --keyColumn=en --valueColumn=ko
+        $ csv-to-keyvalue properties --src=example.csv --dst=ko.json --keyColumn=en --valueColumn=ko
 `,
   {
     flags: {

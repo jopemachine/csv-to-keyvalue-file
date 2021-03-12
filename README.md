@@ -28,8 +28,7 @@ You can obtain the `json` data below by executing the command below to the `csv`
 
 * `Input`: example.csv
 
-```csv
-
+```
 ko,en
 권총,pistol
 돼지저금통,piggy-bank
@@ -39,7 +38,6 @@ ko,en
 쌍안경,binoculars
 꽃병,vase
 ...
-
 ```
 
 * `Output`: dict.json
@@ -55,5 +53,4 @@ ko,en
   "꽃병": "vase",
 ...
 }
-
 ```

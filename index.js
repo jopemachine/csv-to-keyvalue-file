@@ -24,8 +24,8 @@ const cli = meow(
 
 
     Examples
-        $ csv-to-keyvalue json --src=example.csv --dst=ko.json --keyColumn=en --valueColumn=ko
-        $ csv-to-keyvalue properties --src=example.csv --dst=ko.json --keyColumn=en --valueColumn=ko
+        $ csv-to-keyvalue json --src=example.csv --dst=dict.json --keyColumn=en --valueColumn=ko
+        $ csv-to-keyvalue properties --src=example.csv --dst=dict.properties --keyColumn=en --valueColumn=ko
 `,
   {
     flags: {

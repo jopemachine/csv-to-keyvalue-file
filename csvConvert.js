@@ -11,10 +11,10 @@ module.exports = function (type, { src, dst, keyColumn, valueColumn, filter, dir
   if (dir && dst) dst = `${targetPath}${path.sep}${dst}_${targetFileName.split('.')[0]}`
   if (!dst) dst = `${targetPath}${path.sep}${targetFileName.split('.')[0]}`
 
-  console.log('** source file: ' + src)
-  console.log('** destination file: ' + dst)
-  console.log('** key column: ' + keyColumn)
-  console.log('** value column: ' + valueColumn)
+  console.log('# Source file: ' + src)
+  console.log('# Destination file: ' + dst)
+  console.log('# Key column: ' + keyColumn)
+  console.log('# Value column: ' + valueColumn)
 
   const [firstLine, ...cssLines] = fs.readFileSync(src).toString().split('\n')
 

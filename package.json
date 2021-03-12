@@ -1,10 +1,10 @@
 {
   "name": "csv-to-keyvalue-file",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "bin": {
     "csv-convert": "./index.js"
   },
-  "description": "Convert csv file's columns key-value file",
+  "description": "Very simple csv converter",
   "main": "index.js",
   "scripts": {
     "test": ""
@@ -23,5 +23,11 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1"
-  }
+  },
+  "keywords": [
+    "csv",
+    "json",
+    "properties",
+    "convert"
+  ]
 }

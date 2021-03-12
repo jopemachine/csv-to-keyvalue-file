@@ -22,7 +22,7 @@ Convert csv file to `json` or `properties` or other file
 
 ### Example
 
-You can obtain the data below by executing the command below to the data below.
+You can obtain the `json` data below by executing the command below to the `csv` data below.
 
 `csv-to-keyvalue json --src=example.csv --dst=dict.json --keyColumn=en --valueColumn=ko`
 
